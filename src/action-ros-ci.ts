@@ -569,7 +569,8 @@ done`;
   ${randomStringPrefix}/${repo["repo"]}:
     type: git
     url: 'https://github.com/${repoFullName}.git'
-    version: '${commitRef}'`;
+    version: '${commitRef}'
+    shallow: 1`;
 	fs.writeFileSync(repoFilePath, repoFileContent);
 	await execShellCommand(
 		["vcs import --force --recursive src/ < package.repo"],

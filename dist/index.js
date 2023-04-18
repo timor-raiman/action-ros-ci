@@ -11560,7 +11560,8 @@ done`;
   ${randomStringPrefix}/${repo["repo"]}:
     type: git
     url: 'https://github.com/${repoFullName}.git'
-    version: '${commitRef}'`;
+    version: '${commitRef}'
+    shallow: 1`;
         fs_1.default.writeFileSync(repoFilePath, repoFileContent);
         yield execShellCommand(["vcs import --force --recursive src/ < package.repo"], options);
         // Print HEAD commits of all repos
