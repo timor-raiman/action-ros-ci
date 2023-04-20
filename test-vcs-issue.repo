@@ -1,0 +1,5 @@
+repositories:
+  ju4wlnyg55h/action-ros-ci:
+    type: git
+    url: 'https://github.com/timor-raiman/action-ros-ci.git'
+    version: '$PRMERGE_SHA'
